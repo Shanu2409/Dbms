@@ -1,0 +1,9 @@
+create or replace procedure mini(x in number, y in number)
+is
+begin
+if x < y then
+    dbms_output.put_line('x');
+else
+    dbms_output.put_line('y');
+end if;
+end;
