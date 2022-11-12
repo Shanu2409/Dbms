@@ -1,0 +1,20 @@
+create function sal return boolean is
+dept_id employees.department_id%type;
+emp_no employees.emp_id%type;
+sal employees.salary%type;
+avg_sal employees.salary%type;
+
+begin
+    emp_no := 1;
+    select salary, department_id into sal, dept_id
+    from employees
+    where emp_id = emp_no;
+    select avg(salary) into avg_sal
+    from employees
+    where department_id = dept_id;
+    
+    if sal > avg_sal then return true;
+    else return false;
+    end if ;
+    end;
+    /
