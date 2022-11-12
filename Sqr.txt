@@ -1,0 +1,19 @@
+declare
+num number;
+ans number;
+
+function sqr(x number) return number
+is
+a number;
+begin
+a := x*x;
+return a;
+end;
+
+begin
+num := 3;
+ans := sqr(num);
+dbms_output.put_line('Hello World!' || ans);
+
+end;
+/
